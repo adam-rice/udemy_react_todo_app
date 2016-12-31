@@ -4,6 +4,9 @@ module.exports = {
     path: __dirname,
     filename: './public/bundle.js'
   },
+  externals: {
+    jquery: 'jQuery'
+  },
   resolve: {
     root: __dirname,
     modulesDirectories: [
