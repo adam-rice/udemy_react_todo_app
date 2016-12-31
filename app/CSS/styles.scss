@@ -1,18 +1,23 @@
 @import 'reset';
 
-#body {
+body {
   background-color: #F5F5F5;
-  height: 100vh;
   text-align: center;
 }
 
-#search-input {
+input {
   display: block;
-  margin: auto;
+  margin: 5px auto;
+}
+
+#checkbox {
+  display: inline-block;
+  margin: 0 5px 0 0;
 }
 
 #search-div, #list-div, form {
   border: 1px solid green;
   width: 50vw;
-  margin: auto;
+  margin: 20px auto;
+  padding: 5px;
 }
