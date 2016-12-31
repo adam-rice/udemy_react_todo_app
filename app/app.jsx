@@ -1,8 +1,11 @@
 /*jshint esversion: 6 */
-var React = require('react');
-var ReactDOM = require('react-dom');
+const React = require('react');
+const ReactDOM = require('react-dom');
+require('Styles');
+const TodoApp = require('TodoApp.jsx');
+
 
 ReactDOM.render(
-  <h1>Starter Kit</h1>,
+  <TodoApp/>,
   document.getElementById('app')
 );

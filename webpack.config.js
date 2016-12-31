@@ -6,7 +6,12 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './app/components'
+    ],
     alias: {
+      Styles: 'app/CSS/styles.scss'
     },
     extenstions: ['', '.js', '.jsx', '.json', '.scss', '.css'],
   },
