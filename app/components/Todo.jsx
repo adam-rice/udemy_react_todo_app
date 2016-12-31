@@ -7,7 +7,7 @@ const Todo = React.createClass({
 
     return (
       <div>
-        {text} {id}
+        {id}. {text}
       </div>
     );
   }
