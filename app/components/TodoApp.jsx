@@ -13,10 +13,10 @@ const TodoApp = React.createClass({
       showCompleted: false,
       searchText: '',
       todos: TodoAPI.getTodos()
-    }
+    };
   },
 
-  compenentDidMount: function() {
+  componentDidUpdate: function() {
     TodoAPI.setTodos(this.state.todos);
   },
 
@@ -30,7 +30,7 @@ const TodoApp = React.createClass({
           completed: false
         }
       ]
-    })
+    });
   },
 
   handleToggle: function(id) {
@@ -39,7 +39,7 @@ const TodoApp = React.createClass({
         todo.completed = !todo.completed;
       }
       return todo;
-    })
+    });
     this.setState({todos: updatedTodos});
   },
 
