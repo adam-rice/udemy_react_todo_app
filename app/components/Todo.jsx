@@ -6,7 +6,9 @@ const Todo = React.createClass({
     const { text, id, completed } = this.props;
 
     return (
-      <div onClick={() => {
+      <div
+        className="todo"
+        onClick={() => {
         this.props.onToggle(id);
       }}>
         <input

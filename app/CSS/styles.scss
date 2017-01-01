@@ -16,12 +16,12 @@ input {
 }
 
 #search-div, #list-div, form {
-  border: 1px solid green;
+  border: 2px solid navy;
   width: 50vw;
   margin: 20px auto;
   padding: 5px;
 }
 
-#list-div {
+.todo {
   text-align: left;
 }

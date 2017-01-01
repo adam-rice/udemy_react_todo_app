@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 const React = require('react');
 const uuid = require('node-uuid');
+const TodoAPI = require('TodoAPI.jsx');
 const TodoList = require('TodoList.jsx');
 const AddTodo = require('AddTodo.jsx');
 const TodoSearch = require('TodoSearch.jsx');
@@ -11,8 +12,12 @@ const TodoApp = React.createClass({
     return {
       showCompleted: false,
       searchText: '',
-      todos: []
+      todos: TodoAPI.getTodos()
     }
+  },
+
+  compenentDidMount: function() {
+    TodoAPI.setTodos(this.state.todos);
   },
 
   handleAddTodo: function(text) {

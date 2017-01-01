@@ -1,9 +1,20 @@
+var webpack = require('webpack');
+var path = require('path');
+
 module.exports = {
-  entry: './app/app.jsx',
+  entry: [
+    './app/app.jsx'
+  ],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    })
+  ],
   externals: {
     jquery: 'jQuery'
   },
@@ -11,7 +22,8 @@ module.exports = {
     root: __dirname,
     modulesDirectories: [
       'node_modules',
-      './app/components'
+      './app/components',
+      './app/API'
     ],
     alias: {
       Styles: 'app/CSS/styles.scss'
