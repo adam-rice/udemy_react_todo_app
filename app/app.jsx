@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 const React = require('react');
 const ReactDOM = require('react-dom');
+import { Provider } from 'react-redux';
 require('Styles');
 const TodoApp = require('TodoApp.jsx');
 const actions = require('./actions/actions.jsx');
@@ -16,6 +17,8 @@ store.dispatch(actions.setSearchText('yard'));
 store.dispatch(actions.toggleShowCompleted());
 
 ReactDOM.render(
-  <TodoApp/>,
+  <Provider store={store}>
+    <TodoApp/>
+  </Provider>,
   document.getElementById('app')
 );
