@@ -5,6 +5,8 @@ var expect = require('expect');
 var $ = require('jquery');
 
 var TodoApp = require('TodoApp.jsx');
+import TodoList from 'TodoList.jsx';
+
 
 describe('TodoApp', () => {
   it('should exist', () => {

@@ -4,7 +4,7 @@ const moment = require('moment');
 import { connect } from 'react-redux';
 import actions from '../actions/actions.jsx';
 
-const Todo = React.createClass({
+export const Todo = React.createClass({
   render: function() {
     const { text, id, completed, createdAt, completedAt, dispatch } = this.props;
     const renderDate = () => {
@@ -35,6 +35,4 @@ const Todo = React.createClass({
   }
 });
 
-module.exports = connect(
-
-)(Todo);
+export default connect()(Todo);

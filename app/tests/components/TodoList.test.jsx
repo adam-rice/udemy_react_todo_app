@@ -4,7 +4,8 @@ var TestUtils = require('react-addons-test-utils');
 var expect = require('expect');
 var $ = require('jquery');
 
-var TodoList = require('TodoList.jsx');
+
+import TodoList from 'TodoList.jsx';
 var Todo = require('Todo.jsx');
 
 describe('TodoList', () => {
