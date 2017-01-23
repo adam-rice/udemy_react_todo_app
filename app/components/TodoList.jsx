@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 const React = require('react');
-const Todo = require('Todo.jsx');
+import Todo from 'Todo.jsx';
 import { connect } from 'react-redux';
 
 export const TodoList = React.createClass({
