@@ -6,7 +6,8 @@ const TodoAPI = require('TodoAPI.jsx');
 
 import TodoList from 'TodoList.jsx';
 import AddTodo from 'AddTodo.jsx';
-const TodoSearch = require('TodoSearch.jsx');
+import TodoSearch from 'TodoSearch';
+
 
 
 const TodoApp = React.createClass({
