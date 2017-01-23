@@ -20,6 +20,13 @@ export const toggleTodo = (id) => {
   };
 };
 
+export const addTodos = (todos) => {
+  return {
+    type: "ADD_TODOS",
+    todos
+  };
+};
+
 export const addTodo = (text) => {
   return {
     type: "ADD_TODO",

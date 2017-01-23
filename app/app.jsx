@@ -6,15 +6,16 @@ require('Styles');
 const TodoApp = require('TodoApp.jsx');
 const actions = require('./actions/actions.jsx');
 const store = require('./store/configureStore.jsx').configure();
+const TodoAPI = require('TodoAPI');
 const reducers = require('./reducers/reducers.jsx');
 
 store.subscribe(() => {
-  console.log('New state', store.getState());
+  console.log('New state', state);
+  TodoAPI.setTodos(state.todos);
 });
 
-store.dispatch(actions.addTodo('Clean the yard'));
-store.dispatch(actions.setSearchText('yard'));
-store.dispatch(actions.toggleShowCompleted());
+const initialTodos = TodoAPI.getTodos();
+store.dispatch(actions.addTodos(initialTodos));
 
 ReactDOM.render(
   <Provider store={store}>
