@@ -5,7 +5,7 @@ const moment = require('moment');
 const TodoAPI = require('TodoAPI.jsx');
 
 import TodoList from 'TodoList.jsx';
-const AddTodo = require('AddTodo.jsx');
+import AddTodo from 'AddTodo.jsx';
 const TodoSearch = require('TodoSearch.jsx');
 
 
